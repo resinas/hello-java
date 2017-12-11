@@ -1,8 +1,8 @@
 package hello;
 
-public static class GreetingTranslator {
+public class GreetingTranslator {
 	
-	public static String sayHelloIn(String lang) {
+	public String sayHelloIn(String lang) {
 		String hello;
 		if ("en".equals(lang)) {
 			hello = "hello";
