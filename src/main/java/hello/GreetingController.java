@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class GreetingController {
 
-    @Autowired
     private GreetingTranslator greetingTranslator;
 
     @RequestMapping("/greeting")
