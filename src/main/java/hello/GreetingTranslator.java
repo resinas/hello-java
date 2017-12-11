@@ -12,4 +12,4 @@ public class GreetingTranslator {
 			hello = "no hablo tu idioma";
 		}
 	}
-
+}
