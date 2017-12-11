@@ -2,6 +2,10 @@ package hello;
 
 public class GreetingTranslator {
 	
+	public GreetingTranslator(){
+		super();
+	}
+	
 	public String sayHelloIn(String lang) {
 		String hello;
 		if ("en".equals(lang)) {
