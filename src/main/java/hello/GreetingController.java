@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import hello.GreetingTranslator ;
 
+@Controller
 public class GreetingController{
 
     @RequestMapping("/greeting")
