@@ -8,3 +8,27 @@
     <p th:text="'Hello, ' + ${name} + '!'" />
 </body>
 </html>
+package hello;
+
+public class GreetingTranslator {
+	
+	public String sayHelloIn(String lang) {
+		String hello;
+		if ("en".equals(lang)) {
+			hello = "hello";
+		} else if ("es".equals(lang)) {
+			hello = "hola";
+		} else {
+			hello = "no hablo tu idioma";
+		}
+	}
+
+}
+ @RequestMapping("/greeting")
+    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, 
+    					   @RequestParam(value="lang", required=false, defaultValue="en") String lang, 
+    					   Model model) {
+    	model.addAttribute("hello", greetingTranslator.sayHelloIn(lang));
+        model.addAttribute("name", name);
+        return "greeting";
+    }
